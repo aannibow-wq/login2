@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account - Online Application Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="modal-open">
+
+  <!-- Header stays visible behind the dark overlay -->
+  <header class="brand">
+    <div class="logo"><img src="logo.png" alt="University logo"></div>
+    <h1>MBARARA UNIVERSITY OF SCIENCE AND TECHNOLOGY</h1>
+    <span class="badge">Online Application Portal</span>
+  </header>
+
+  <!-- The overlay is already "open" on this page (no JavaScript needed) -->
+  <div class="overlay open">
+    <div class="modal" role="dialog" aria-labelledby="createTitle">
+
+      <div class="modal-header">
+        <div>
+          <h3 id="createTitle">Create Account</h3>
+          <p>Provide your details to receive a temporary password.</p>
+        </div>
+        <a href="index.html" class="close-x" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+
+    
+      <form id="createForm" action="register.php" method="post" style="display:contents">
+        <div class="modal-body">
+
+          <div class="field">
+            <label for="surname">Surname</label>
+            <div class="input-group">
+              <span class="icon"><i class="fa-solid fa-user"></i></span>
+              <input type="text" id="surname" name="surname" placeholder="Surname" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="othernames">Other Names</label>
+            <div class="input-group">
+              <span class="icon"><i class="fa-solid fa-user-tag"></i></span>
+              <input type="text" id="othernames" name="other_names" placeholder="Other names" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="country">Phone Number</label>
+            <select class="country" id="country" name="country_code">
+              <option value="+256" selected>Uganda (+256)</option>
+              <option value="+254">Kenya (+254)</option>
+              <option value="+255">Tanzania (+255)</option>
+              <option value="+250">Rwanda (+250)</option>
+              <option value="+257">Burundi (+257)</option>
+              <option value="+211">South Sudan (+211)</option>
+              <option value="+243">DR Congo (+243)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+27">South Africa (+27)</option>
+            </select>
+            <div class="input-group">
+              <span class="icon"><i class="fa-solid fa-phone"></i></span>
+              <input type="tel" id="phone" name="phone" placeholder="0770000000" inputmode="tel" required>
+            </div>
+            <p class="hint">Use an active phone number to receive notifications.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <div class="input-group">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" id="email" name="email" placeholder="myemail@gmail.com" required>
+            </div>
+            <span class="email-help">
+              <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">
+                Don't have an Email? Click to create <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <a href="index.html" class="btn btn-outline-dark">Close</a>
+          <button type="submit" class="btn btn-blue">
+            <i class="fa-solid fa-user-plus"></i> Create Account
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+</html>
